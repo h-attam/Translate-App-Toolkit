@@ -1,0 +1,55 @@
+/* Tailwind CSS direktifleri */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { 
+    background: linear-gradient(to right, #0099f7, #f11712);
+}
+
+/* Loader stilleri */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Bar stilleri ve animasyon */
+.bar {
+    width: 7px;
+    height: 18px;
+    background-color: aqua;
+    border-radius: 10px;
+    margin: 0 9px;
+    animation: loading 1s ease-in-out infinite;
+}
+
+.bar:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.bar:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.bar:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Animasyon tanımı */
+@keyframes loading {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1, 2.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
